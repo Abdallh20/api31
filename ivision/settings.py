@@ -24,7 +24,9 @@ load_dotenv()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw'
 DATABASES ='postgresql://postgres:UdCbxcxtidZGIypMaoIdkidPQbnqAUUi@autorack.proxy.rlwy.net:18286/railway'
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES= {
+    "deault": dj_database_url.config(default=DATABASE_URL, conn_max_age=500),
+}
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
