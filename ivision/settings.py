@@ -24,7 +24,7 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1','api-five-red.vercel.app','graudtion.vercel.app','https://graudtion.vercel.app/']
 
