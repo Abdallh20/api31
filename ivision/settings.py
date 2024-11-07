@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1','api-five-red.vercel.app','testapi-production-b8cb.up.railway.app','api31-production.up.railway.app','https://testapi-production-b8cb.up.railway.app/','https://api31-production.up.railway.app/']
-
+ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1','api-five-red.vercel.app','testapi.railway.internal','api31-production.up.railway.app','https://testapi-production-b8cb.up.railway.app/','https://api31-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://testapi-production-b8cb.up.railway.app/','https://api31-production.up.railway.app/','testapi.railway.internal','https://testapi.railway.internal']
 
 # Application definition
 
