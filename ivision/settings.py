@@ -23,9 +23,9 @@ load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw'
-DATABASES ='postgresql://postgres:UdCbxcxtidZGIypMaoIdkidPQbnqAUUi@autorack.proxy.rlwy.net:18286/railway'
+DATABASES_URL ='postgresql://postgres:UdCbxcxtidZGIypMaoIdkidPQbnqAUUi@autorack.proxy.rlwy.net:18286/railway'
 DATABASES= {
-    "deault": dj_database_url.config(default=DATABASE_URL, conn_max_age=500),
+    "deault": dj_database_url.config(default=DATABASES_URL, conn_max_age=500),
 }
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -85,14 +85,14 @@ WSGI_APPLICATION = 'ivision.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',    
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'railway',
-        'USER':'postgres',
-        'PASSWORD': os.environ.get('DB_PASSWORD_YO'),
-        'HOST':'autorack.proxy.rlwy.net',
-        'PORT':'18286',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',    
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME':'railway',
+        # 'USER':'postgres',
+        # 'PASSWORD': os.environ.get('DB_PASSWORD_YO'),
+        # 'HOST':'autorack.proxy.rlwy.net',
+        # 'PORT':'18286',
     }
 }
 
