@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -24,23 +23,23 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://api31-production.up.railway.app:8080/','api31-production.up.railway.app:8080','127.0.0.1']
-
+ALLOWED_HOSTS = ['api31-production.up.railway.app','api31-production-8080.up.railway.app','127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://api31-production-8080.up.railway.app','https://api31-production.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [    
-    'api',
-    'rest_framework',
-    'whitenoise.runserver_nostatic',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'api',
+    'rest_framework',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
