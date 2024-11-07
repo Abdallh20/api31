@@ -81,14 +81,14 @@ WSGI_APPLICATION = 'ivision.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',    
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME':'railway',
-        # 'USER':'postgres',
-        # 'PASSWORD': os.environ.get('DB_PASSWORD_YO'),
-        # 'HOST':'autorack.proxy.rlwy.net',
-        # 'PORT':'18286',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',    
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'railway',
+        'USER':'postgres',
+        'PASSWORD': os.environ.get('DB_PASSWORD_YO'),
+        'HOST':'autorack.proxy.rlwy.net:18286',
+        'PORT':'5432',
     }
 }
 
