@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,10 +22,7 @@ load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw'
-DATABASES_URL ='postgresql://postgres:UdCbxcxtidZGIypMaoIdkidPQbnqAUUi@autorack.proxy.rlwy.net:18286/railway'
-DATABASES= {
-    "deault": dj_database_url.config(default=DATABASES_URL, conn_max_age=500),
-}
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
