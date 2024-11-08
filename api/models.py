@@ -6,7 +6,7 @@ from datetime import datetime
 class location(models.Model):
     longitude = models.FloatField()
     latitude = models.FloatField()
-    images = models.CharField(max_length=1000000000000000000000000,default="")
+    images = models.TextField(max_length=1000000000000000000000000,default="")
     is_accident = models.BooleanField()
     is_fire = models.BooleanField()
 
