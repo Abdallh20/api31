@@ -5,7 +5,7 @@
         "dest": "ivision/wsgi.py",
         "config": {
           "maxLambdaSize": "15mb",
-          "runtime": "python3.9"
+          "runtime": "python3.12"
         }
       }
     ]
