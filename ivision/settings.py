@@ -29,8 +29,8 @@ ALLOWED_HOSTS = ['api31-production.up.railway.app','api31-production-8080.up.rai
 CSRF_TRUSTED_ORIGINS = ['https://api31-production-8080.up.railway.app','https://api31-production.up.railway.app']
 # Application definition
 
-INSTALLED_APPS = [    
-
+INSTALLED_APPS = [      # required for serving swagger ui's css/js files
+    'drf_yasg',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'whitenoise.runserver_nostatic',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'ivision.urls'
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'ivision.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
