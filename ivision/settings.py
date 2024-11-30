@@ -42,7 +42,7 @@ INSTALLED_APPS = [      # required for serving swagger ui's css/js files
     'whitenoise.runserver_nostatic',
     'rest_framework_swagger',
 ]
-
+load_dotenv()
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
