@@ -21,7 +21,7 @@ def no_rest_model(request):
 
 def graduationproject(request):
     if request.method == 'GET':
-        data = location.objects.all()
+        data = delocation.objects.all()
         serializer = locationSerializer(data,many=True)
         return Response(serializer.data)
     if request.method == 'POST':
@@ -34,11 +34,11 @@ def graduationproject(request):
 @api_view(['GET','PUT','DELETE'])
 def graduationproject2(request,pk):
     try:
-        data = location.objects.get(pk=pk)
-    except location.DoesNotExist:
+        data = delocation.objects.get(pk=pk)
+    except delocation.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     if request.method == 'GET':
-        data = location.objects.get(pk=pk)
+        data = delocation.objects.get(pk=pk)
         serializer = locationSerializer(data)
         return Response(serializer.data)
     if request.method == 'PUT':
