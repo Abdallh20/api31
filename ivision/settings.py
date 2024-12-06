@@ -88,7 +88,7 @@ DATABASES = {
         'USER':'postgres',
         'PASSWORD': 'UdCbxcxtidZGIypMaoIdkidPQbnqAUUi',
         'HOST':'autorack.proxy.rlwy.net',
-        'PORT':'18286',
+        'PORT':'55724',
     }
 }
 
