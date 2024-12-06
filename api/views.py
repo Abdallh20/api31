@@ -31,7 +31,7 @@ def graduationproject(request):
         return Response(serializer.data,status=status.HTTP_201_CREATED)
     # guest.objects.create(name=data['name'],emaiyl=data['email'],phone=data['phone'])
     return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
-@api_view(['GET','PUT','DELETE'])
+@api_view(['GET','PUT','DELETE','PATCH'])
 def graduationproject2(request,pk):
     try:
         data = delocation.objects.get(pk=pk)
