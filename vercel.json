@@ -13,18 +13,19 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "staticfiles"
+        "distDir": "ui/staticfiles"
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "ivision/wsgi.py"
-    },
-    {
       "src": "/static/(.*)",
       "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "ivision/wsgi.py"
     }
-  ]
+  ],
+  "outputDirectory": "ui/staticfiles"
 }
