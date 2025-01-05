@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['api31-production.up.railway.app','api31-production-8080.up.railway.app','127.0.0.1', '.vercel.app']
 CSRF_TRUSTED_ORIGINS = ['https://api31-production-8080.up.railway.app','https://api31-production.up.railway.app']
