@@ -3,22 +3,11 @@ from django.http.response import JsonResponse,HttpResponse
 from .models import *
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import locationSerializer
+from .serializers import *
 from rest_framework import status,filters
 # Create your views here.
-def no_rest_no_model(request):
-    guest =[
-        {'name':'sai','email':'sai@123','phone':123456789},
-        {'name':'sai1','email':'sai1@123','phone':123456789},
-        {'name':'sai2','email':'sai2@123','phone':23456789},
-    ]
-    return JsonResponse(guest, safe=False)
-def no_rest_model(request):
-    data = location.objects.all()
-    return JsonResponse(list(data.values()), safe=False)
 
 @api_view(['GET','POST'])
-
 def graduationproject(request):
     if request.method == 'GET':
         data = delocation.objects.all()
