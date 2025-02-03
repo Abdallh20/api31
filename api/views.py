@@ -10,7 +10,7 @@ from rest_framework import status,filters
 @api_view(['GET','POST'])
 def graduationproject(request):
     if request.method == 'GET':
-        data = delocation.objects.all()
+        data = delocation.objects.all().order_by('pk')
         serializer = delocationse(data,many=True)
         return Response(serializer.data)
     if request.method == 'POST':
