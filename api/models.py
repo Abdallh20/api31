@@ -11,7 +11,7 @@ class delocation(models.Model):
     is_fire = models.BooleanField()
     servo_angle=models.FloatField(default=0)
     target_angle=models.FloatField(default=0)
-    predict=models.BooleanField(default=True)
+    predict=models.BooleanField(default=False)
     def __str__(self):
         return f"({self.longitude}, {self.latitude})"
 
