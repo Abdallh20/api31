@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-4wf7rclc2j+n+=cfa4p1s*sp!r^#=ul3nf0v=9!p6@#b7-jhaw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['api31-production.up.railway.app','api31-production-8080.up.railway.app','127.0.0.1', '.vercel.app']
-CSRF_TRUSTED_ORIGINS = ['https://api31-production-8080.up.railway.app','https://api31-production.up.railway.app']
+ALLOWED_HOSTS = ['ivision.up.railway.app','ivision-8080.up.railway.app','127.0.0.1', '.vercel.app']
+CSRF_TRUSTED_ORIGINS = ['https://ivision-8080.up.railway.app','https://ivision.up.railway.app']
 # Application definition
 WSGI_APPLICATION = 'ivision.wsgi.app'
 INSTALLED_APPS = [      # required for serving swagger ui's css/js files
