@@ -5,10 +5,17 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers1 import delocationse
 from rest_framework import status,filters
-# Create your views here.
-
+'''
+My name is Abdallah shref
+UI/UX Designer
+Backend Developer
+I Use Django(DRF) in this project
+'''
 @api_view(['GET','POST'])
 def graduationproject(request):
+    '''
+    this is get request and post request
+    '''
     if request.method == 'GET':
         data = delocation.objects.all().order_by('pk')
         serializer = delocationse(data,many=True)

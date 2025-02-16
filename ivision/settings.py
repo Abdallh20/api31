@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['ivision.up.railway.app','ivision-8080.up.railway.app','127.0.0
 CSRF_TRUSTED_ORIGINS = ['https://ivision-8080.up.railway.app','https://ivision.up.railway.app']
 # Application definition
 WSGI_APPLICATION = 'ivision.wsgi.app'
-INSTALLED_APPS = [      # required for serving swagger ui's css/js files
+INSTALLED_APPS = [     
     'drf_yasg',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,14 +81,14 @@ WSGI_APPLICATION = 'ivision.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',    
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'railway',
-        'USER':'postgres',
-        'PASSWORD': 'YqnkfSrXiwmkdEMKKTJpjQIQDcuJxBfI',
-        'HOST':'autorack.proxy.rlwy.net',
-        'PORT':'16979',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',    
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME':'railway',
+        # 'USER':'postgres',
+        # 'PASSWORD': 'YqnkfSrXiwmkdEMKKTJpjQIQDcuJxBfI',
+        # 'HOST':'autorack.proxy.rlwy.net',
+        # 'PORT':'16979',
     }
 }
 

@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 # Create your models here.
-#guest --- hall ---reservation
+#delocation store longitude,latitude,images,is_accident,is_fire,servo_angle,target_angle,predict
 
 class delocation(models.Model):
     longitude = models.FloatField()
@@ -14,5 +14,3 @@ class delocation(models.Model):
     predict=models.BooleanField(default=False)
     def __str__(self):
         return f"({self.longitude}, {self.latitude})"
-
-
