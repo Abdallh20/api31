@@ -12,7 +12,7 @@ Backend Developer
 I Use Django(DRF) in this project
 '''
 @api_view(['GET','POST'])
-def graduationproject(request):
+def Ivison(request):
     '''
     this is get request and post request
     '''
@@ -27,7 +27,7 @@ def graduationproject(request):
         return Response(serializer.data,status=status.HTTP_201_CREATED)
     return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
 @api_view(['GET','PUT','DELETE','PATCH'])
-def graduationproject2(request,pk):
+def RestIvison(request,pk):
     try:
         data = delocation.objects.get(pk=pk)
     except delocation.DoesNotExist:

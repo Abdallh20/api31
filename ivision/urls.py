@@ -47,7 +47,7 @@ urlpatterns = [
         ), name='swagger-ui'),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path("rest/", views.graduationproject),
-    path("rest/<int:pk>/", views.graduationproject2),
+    path("rest/", views.Ivison),
+    path("rest/<int:pk>/", views.RestIvison),
     
 ]
