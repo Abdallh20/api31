@@ -5,12 +5,14 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers1 import delocationse
 from rest_framework import status,filters
+from django.views.decorators.cache import cache_page
 '''
 My name is Abdallah shref
 UI/UX Designer
 Backend Developer
 I Use Django(DRF) in this project
 '''
+@cache_page(60*15)
 @api_view(['GET','POST'])
 def Ivison(request):
     '''
@@ -26,6 +28,7 @@ def Ivison(request):
         serializer.save()
         return Response(serializer.data,status=status.HTTP_201_CREATED)
     return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
+@cache_page(60*60)  # Cache the response for 1 hour
 @api_view(['GET','PUT','DELETE','PATCH'])
 def RestIvison(request,pk):
     try:
