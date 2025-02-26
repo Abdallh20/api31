@@ -137,7 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CACHES = {
     "default": {
     "BACKEND": "django_redis.cache.RedisCache",
-    "LOCATION": "redis://default:fekbBgVHjabnjqXDTYBeXDilQlqupjoO@redis.railway.internal:6379",
+    "LOCATION": "redis://default:fekbBgVHjabnjqXDTYBeXDilQlqupjoO@maglev.proxy.rlwy.net:42302",
     "OPTIONS": {
         "CLIENT_CLASS": "django_redis.client.DefaultClient",
     },
