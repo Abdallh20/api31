@@ -12,7 +12,7 @@ UI/UX Designer
 Backend Developer
 I Use Django(DRF) in this project
 '''
-@cache_page(60*15)
+@cache_page(60*60)
 @api_view(['GET','POST'])
 def Ivison(request):
     """
@@ -34,7 +34,7 @@ def Ivison(request):
         serializer.save()
         return Response(serializer.data,status=status.HTTP_201_CREATED)
     return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
-@cache_page(60*15)  
+@cache_page(60*60)  
 @api_view(['GET','PUT','DELETE','PATCH'])
 def RestIvison(request,pk):
     """
