@@ -24,5 +24,5 @@ print(f'| {'#':<5}| {'ID':<5}| {'Time':<19}| {'Average':<19}| {'Total':<19}| {'S
 times = []
 for i in range(20):
     response = requests.get(url)
-    print(response)
+    print(response.status_code)
 
