@@ -3,7 +3,7 @@ import base64
 import numpy
 import time
 
-url = 'https://api31-six.vercel.app/rest/'
+url = 'https://api31-3r4z.vercel.app/rest/'
 response = requests.get(url)
 print(response)
 # headers = {
