@@ -6,9 +6,9 @@ import time
 url = 'https://api31-3r4z.vercel.app/rest/'
 response = requests.get(url)
 print(response)
-# headers = {
-#     'Content-Type': 'application/json'
-# }
+headers = {
+    'Content-Type': 'application/json'
+}
 # data = {
 #     "pk": 66,
 #     "longitude": 1231.34,
