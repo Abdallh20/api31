@@ -12,5 +12,6 @@ class delocation(models.Model):
     servo_angle=models.FloatField(default=0)
     target_angle=models.FloatField(default=0)
     predict=models.BooleanField(default=False)
+    description = models.TextField(max_length=1000000000000000000000000, default="")
     def __str__(self):
         return f"({self.longitude}, {self.latitude})"
