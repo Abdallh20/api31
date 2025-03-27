@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers1 import delocationse
 from rest_framework import status,filters
-from django.views.decorators.cache import cache_page
+
 '''
 My name is Abdallah shref
 UI/UX Designer
@@ -21,7 +21,6 @@ def Ivison(request):
     - GET: Retrieve a list of all delocation objects, ordered by primary key.
     - POST: Create a new delocation object with the provided data.
 
-    Caches the response for 5 minutes.
     """
 
     if request.method == 'GET':
